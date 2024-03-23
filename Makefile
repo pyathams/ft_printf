@@ -22,7 +22,7 @@ SRC		=	ft_hexadecimal_util.c \
 					
 OBJ		=	$(SRC:.c=.o)
 
-CC		= 	cc
+CC		= 	gcc
 FLAGS	=	-Wall -Werror -Wextra
 
 %o:%c

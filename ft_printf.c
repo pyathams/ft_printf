@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:24:37 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 04:04:07 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:51:00 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,12 @@ int	ft_printf(const char *format, ...)
 }
 
 // #include <stdio.h>
+// #include <limits.h>
 
 // int	main(void)
 // {
-// 	int n = 21456324;
+// 	int n = 0;
+// 	int *ptr = &n;
 // 	int m;
 // 	int o;
 // 	ft_printf("%d \n",ft_printf("%c \n", 'h'));
@@ -75,14 +77,14 @@ int	ft_printf(const char *format, ...)
 // 	printf("%i \n",printf("hello world \n"));
 // 	ft_printf("%d \n",ft_printf("%% \n"));
 // 	printf("%d \n",printf("%% \n"));
-// 	printf("%d \n",ft_printf("%s \n", "hello"));
+// 	ft_printf("%d \n",ft_printf("%s \n", "hello"));
 // 	printf("%d \n",printf("%s \n", "hello"));
 // 	int s2 = printf("%d \n", n);
 // 	int s1 = ft_printf("%d \n", n);
 // 	printf("%d \n", s2);
-// 	printf("%d \n", s1);
-// 	m = printf("%p \n", &n);
-// 	o = ft_printf("%p \n", &n);
+// 	ft_printf("%d \n", s1);
+// 	m = printf("%p \n", (void *)ptr);
+// 	o = ft_printf("%p \n", (void *)ptr);
 // 	printf("%d \n",m);
 // 	ft_printf("%d \n",o);
 // 	int p = printf("%x \n", n);
@@ -91,4 +93,8 @@ int	ft_printf(const char *format, ...)
 // 	int s =ft_printf("%X \n", n);
 // 	printf("%d %d \n", p, r);
 // 	ft_printf("%d %d \n", q, s);
+// 	int d =ft_printf("%u \n", UINT_MAX);
+// 	ft_printf("%d\n", d);
+// 	int d1 =printf("%u \n", UINT_MAX);
+// 	printf("%d \n", d1);
 // }
