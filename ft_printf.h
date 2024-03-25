@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 18:46:13 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 02:59:27 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:25:38 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int		ft_put_unsigned_nbr(unsigned int n);
 int		llength(long long n, int base);
 int		ptr_print(unsigned long n);
 int		hex(unsigned long n);
-int		hlength(long long n);
-int		ft_print_hexa(int n, const char type);
-void	print_hex_print(int n, const char type);
+int		hlength(unsigned long n);
+int		ft_print_hexa(unsigned int n, const char type);
+int		ft_print_hexa(unsigned int n, const char type);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 17:24:37 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 15:51:00 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 16:41:22 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,18 +52,23 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		if (!format[i])
+		{
+			va_end(args);
 			return (count);
+		}
 		if (format[i] != '%')
 		{
 			count++;
 			ft_putchar(format[i++]);
 		}
 	}
+	va_end(args);
 	return (count);
 }
 
 // #include <stdio.h>
 // #include <limits.h>
+// #define __INT_MAX__ 2147483647
 
 // int	main(void)
 // {
@@ -97,4 +102,6 @@ int	ft_printf(const char *format, ...)
 // 	ft_printf("%d\n", d);
 // 	int d1 =printf("%u \n", UINT_MAX);
 // 	printf("%d \n", d1);
+// 	printf(" %p %p ", INT_MIN, INT_MAX);
+// 	// printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
 // }

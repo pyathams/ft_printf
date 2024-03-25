@@ -6,13 +6,13 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 02:38:39 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 03:04:47 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:23:44 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	print_hex_print(int n, const char type)
+void	print_hex_print(unsigned int n, const char type)
 {
 	if (n >= 16)
 	{
@@ -33,7 +33,7 @@ void	print_hex_print(int n, const char type)
 	}
 }
 
-int	ft_print_hexa(int n, const char type)
+int	ft_print_hexa(unsigned int n, const char type)
 {
 	if (n == 0)
 		return (write(1, "0", 1));

@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 01:40:09 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 04:27:47 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:28:37 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	putstr(char *str)
 {
 	int	i;
 
-	if (!str)
+	if (str == NULL)
 	{
-		putstr("(null)");
+		write(1, "(null)", 6);
 		return (6);
 	}
 	i = 0;
@@ -54,8 +54,8 @@ int	llength(long long n, int base)
 	int	i;
 
 	i = 0;
-	if (n == 0)
-		return (1);
+	if (n <= 0)
+		i++;
 	while (n)
 	{
 		n = n / base;
@@ -64,11 +64,13 @@ int	llength(long long n, int base)
 	return (i);
 }
 
-int	hlength(long long n)
+int	hlength(unsigned long n)
 {
 	int	i;
 
 	i = 0;
+	if (n <= 0)
+		i++;
 	while (n)
 	{
 		n = n / 16;

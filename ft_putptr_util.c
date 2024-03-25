@@ -6,7 +6,7 @@
 /*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 01:08:53 by pyathams          #+#    #+#             */
-/*   Updated: 2024/03/23 02:37:32 by pyathams         ###   ########.fr       */
+/*   Updated: 2024/03/23 17:19:25 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ int	hex(unsigned long n)
 
 int	ptr_print(unsigned long n)
 {
-	write(1, "0x", 2);
 	if (n == 0)
-		return (write (1, "0", 1) + 2);
+		return (write (1, "(nil)", 5), 5);
 	else
+	{
+		write(1, "0x", 2);
 		hex(n);
+	}
 	return (hlength(n));
 }
