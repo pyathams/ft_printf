@@ -49,18 +49,13 @@ int	ft_printf(const char *format, ...)
 		{
 			i++;
 			count += flag_print(format[i], args);
-			i++;
-		}
-		if (!format[i])
-		{
-			va_end(args);
-			return (count);
 		}
 		if (format[i] != '%')
 		{
 			count++;
 			ft_putchar(format[i++]);
 		}
+		i++;
 	}
 	va_end(args);
 	return (count);
